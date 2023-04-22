@@ -6,7 +6,7 @@ const DefaultLayout = (props) => {
     <>
       <Navbar />
       <HeroCarousel/>
-      {/* <div>{props.children}</div> */}
+      <div>{props.children}</div>
     </>
   );
 };
