@@ -7,7 +7,7 @@ module.exports = {
         navColor:
         
 {
-  50: '#e5f1ff',
+  50: '#2B3148',
   100: '#bdd4f5',
   200: '#93b7eb',
   300: '#689be3',
