@@ -1,6 +1,9 @@
 import React from "react";
 import EntertainmentCardSlider from "../Components/Entertainment/EntertainmentCard";
 import Premier from "../Components/Premier/Premier";
+import PosterSlider from "../Components/PosterSlider/PosterSlider.comp";
+import PremierImages from "../config/tempPosters.config";
+
 const HomePage = () => {
   return (
     <>
@@ -20,9 +23,16 @@ const HomePage = () => {
 <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120:q-80/premiere-banner-web-collection-202208191200.png"
 alt="rupay" className="w-full h-full"/>
     </div>
-    <Premier />
+    <PosterSlider images={PremierImages} title="Premiers" subtitle ="Brand new Releases every Friday" isDark/>
     </div>
    </div>
+   </div>
+   <div className="container mx-auto px-4">
+    <PosterSlider images={PremierImages} title="Online Streaming Events" isDark={false}/>
+   </div>
+
+   <div className="container mx-auto px-4">
+    <PosterSlider images={PremierImages} title="Outdoor Events" isDark={false}/>
    </div>
     </>
   )
