@@ -60,7 +60,7 @@ const MovieHero = () => {
                 </button>
          
             </div>
-            <div className="flex flex-col text-black p-2 my-7 text-sm">
+            <div className="flex flex-col text-black p-3 my-7 text-sm w-48">
                 <span className="bg-white p-2 my-2 basic-1/4">2D, 3D, IMAX 2D, MX4D</span>
                 <span className="bg-white p-2">2D, 3D, IMAX 2D, MX4D</span>
             </div>
