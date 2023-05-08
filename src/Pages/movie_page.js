@@ -1,8 +1,21 @@
+import axios from "axios";
+import { useState, useEffect } from "react";
 import React from "react";
 import MovieHero from "../Components/MovieHero/Moviehero_comp";
 import { BiCameraMovie } from "react-icons/bi";
-
+import PosterSlider from "../Components/PosterSlider/PosterSlider.comp";
 const MoviePage = () => {
+  const [popularMovies, setPopularMovies] = useState([]);
+
+  useEffect(() => {
+    const requestPopularMovies = async () => {
+      const getPopularMovies = await axios.get("/movie/popular");
+      setPopularMovies(getPopularMovies.data.results);
+    };
+    requestPopularMovies();
+  }, []);
+
+  console.log({ popularMovies });
   return (
     <>
       <MovieHero />
@@ -37,9 +50,17 @@ const MoviePage = () => {
             </div>
           </div>
         </div>
+        <div className="container mx-auto px-4">
+        <PosterSlider
+          images={popularMovies}
+          title="Recommended Movies"
+          isDark={false}
+        />
+      </div>
       </div>
     </>
   );
 };
 
 export default MoviePage;
+

@@ -1,7 +1,22 @@
 import React from "react";
 import { BiChevronRight } from "react-icons/bi";
 import { FcLike } from "react-icons/fc";
-
+const launchRazorPay = () => {
+  let options = {
+    key: "rzp_test_5jUP55WGZqaKVF",
+    amount: 500*100,
+    currency: "INR",
+    name: "Book My Show Clone",
+    description: "Movie Purchase on Rental",
+    image: "https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png",
+    handler: () => {
+      alert("Payment Done")
+    },
+    theme: {color: "#c4242d"}
+  };
+  let rzp = new window.Razorpay(options);
+  rzp.open();
+};
 const MovieHero = () => {
   return (
     <>
@@ -63,6 +78,11 @@ const MovieHero = () => {
             <div className="flex flex-col text-black p-3 my-7 text-sm w-48">
                 <span className="bg-white p-2 my-2 basic-1/4">2D, 3D, IMAX 2D, MX4D</span>
                 <span className="bg-white p-2">2D, 3D, IMAX 2D, MX4D</span>
+            </div>
+            <div>
+            <button onClick={launchRazorPay} class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-8 rounded">
+  Book tickets
+</button>
             </div>
 
           </div>
