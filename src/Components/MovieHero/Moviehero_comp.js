@@ -75,9 +75,12 @@ const MovieHero = () => {
                 </button>
          
             </div>
-            <div className="flex flex-col text-black p-3 my-7 text-sm w-48">
+            <div className="flex flex-col text-black p-3 my-4 text-sm w-48">
                 <span className="bg-white p-2 my-2 basic-1/4">2D, 3D, IMAX 2D, MX4D</span>
-                <span className="bg-white p-2">2D, 3D, IMAX 2D, MX4D</span>
+                <span className="bg-white p-2 basic-1">English, Hindi, Telugu</span>
+            </div>
+            <div>
+              <p className="text-white">2h 12m . Action, Adventure, Fantasy . UA . 3Sept,2021</p>
             </div>
             <div>
             <button onClick={launchRazorPay} class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-8 rounded">
